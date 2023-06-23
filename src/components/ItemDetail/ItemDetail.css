@@ -1,0 +1,31 @@
+.contDetail{
+margin: 2rem;
+}
+.imgProdDetail{
+display: block;
+margin: auto;
+
+}
+.info{
+display: flex;
+flex-direction: column;
+align-items: center;
+line-height: 30px;
+margin-top: 1rem;
+}
+
+.linkItem1, .linkItem2{
+    text-decoration: none;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 1px solid;
+    border-radius: 50px;
+color: black;
+padding: 8px 20px 8px 24px;
+text-align: center;
+}
+
+.linkItem2{
+    background-color: violet;
+}

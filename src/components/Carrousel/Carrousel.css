@@ -1,0 +1,42 @@
+.carrousel {
+    position: relative;
+  }
+  
+  .carrousel button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 5%;
+    height: 10%;
+    padding: 0;
+    color: #fff;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.405);
+    border: 0;
+    opacity: 0.5;
+    transition: opacity 0.15s ease;
+  }
+  
+  .carrousel .ant {
+    left: 0;
+    z-index: 1; 
+  }
+  
+  .carrousel .sig {
+    right: 0;
+    z-index: 1; 
+  }
+  
+  .carrousel .contenido {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+  }
+  
+  .caption {
+    margin-top: 10px;
+  }
+  

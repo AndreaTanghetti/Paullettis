@@ -1,0 +1,32 @@
+.contador{
+    display: grid;
+    width: 30%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 50px 50px;
+    grid-template-areas:
+    "restar num sumar"
+    "agregar agregar agregar ";
+}
+.restar, .sumar, .agregar{
+    background: black;
+    color: white;
+    border: 1px solid;
+    padding: 8px;
+    margin: auto;
+}
+.restar{
+    grid-area: restar;
+}
+.numero{
+    grid-area: num;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.sumar{
+    grid-area: sumar;
+}
+.agregar{
+    width: 100%;
+grid-area: agregar;
+}

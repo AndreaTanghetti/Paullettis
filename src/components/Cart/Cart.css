@@ -1,0 +1,71 @@
+.carritoVacio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.carritoH2{
+    margin-bottom: 20px;
+    text-align: center;
+    
+}
+
+.pCartVacio{
+        font-size: x-large;
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.link0{
+    text-decoration: none;
+    padding: 10px;
+    font-size: 24px;
+    letter-spacing: 3px;
+    border: 1px solid;
+    padding: 8px 20px 8px 24px;
+    line-height: 18px;
+    color:black;
+    border-radius: 50px;
+    background-color: violet;
+}
+
+.divCierreCarrito{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 2;
+    text-align: center;
+}
+
+.link1, .link2, .btnVaciar{
+    text-decoration: none;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+
+}
+.link2, .btnVaciar{
+    border: 1px solid;
+    border-radius: 50px;
+margin-right: auto;
+margin-left: auto;
+padding: 8px 20px 8px 24px;
+}
+
+.link1{
+    font-size:small;
+    color: violet;
+}
+
+.link2{
+    color: black;
+    background-color: violet;
+    width: 50%;
+}
+
+.btnVaciar{
+    background: none;
+}

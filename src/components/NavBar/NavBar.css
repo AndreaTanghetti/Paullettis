@@ -1,0 +1,61 @@
+header {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 160px 60px;
+    grid-template-areas:
+        ". logo login"
+        "menu menu menu";
+    background: black;
+
+}
+
+.logo {
+    grid-area: logo;
+    margin: auto;
+}
+
+img {
+    width: 300px;
+
+}
+
+.login{
+    grid-area: login;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+.menu {
+    grid-area: menu;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+li {
+    list-style: none;
+}
+
+.link {
+    color: white;
+    text-decoration: none;
+    transition: 0.5s;
+}
+
+.link:hover {
+    background-color: white;
+    color: black;
+    padding: 8px;
+    border: solid 1px white;
+    border-radius: 50px;
+}

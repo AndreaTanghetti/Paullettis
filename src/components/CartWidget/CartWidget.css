@@ -1,0 +1,18 @@
+.contenedor{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+
+}
+.iconoCarrito{
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+.linkNum{
+    text-decoration: none;
+    color: white;
+    display: flex;
+}

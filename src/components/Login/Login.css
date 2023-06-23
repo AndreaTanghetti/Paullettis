@@ -1,0 +1,70 @@
+.linkCrear, .linkIniciar{
+    display: flex;
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.linkCrear:hover,.linkIniciar:hover{
+    color: black;
+    border: solid 1px black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+span{
+    color: white;
+    padding: 10px;
+}
+
+.btnCerrar{
+    border: none;
+    background-color: transparent;
+    color: white;
+cursor: pointer;
+transition: 0.3s;
+}
+.btnCerrar:hover{
+    color: black;
+    border: solid 1px black;
+    background-color: white;
+    padding: 10px;
+    border-radius: 50px;
+}
+
+.formularioLogin{
+    display: flex;
+flex-direction: column;
+text-align: center;
+margin-top: 25px;
+margin-bottom: 25px;
+}
+
+.btnLogin{
+    display: block;
+    letter-spacing: 3px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    border: 1px solid;
+    border-radius: 50px;
+margin-right: auto;
+margin-left: auto;
+padding: 8px 20px 8px 24px;
+color: black;
+background-color: violet;
+width: 50%;
+}
+
+.pLogin{
+    letter-spacing: 3px;
+    margin-top: 30px;
+}
+.linkLogin{
+    color: violet;
+    text-decoration: none;
+}
+
+.swal2-actions{
+    display: flex;
+    flex-direction: row-reverse;
+}
