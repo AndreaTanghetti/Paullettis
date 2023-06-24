@@ -10,7 +10,7 @@ const NavBar = () => {
         <img src={imgLogo} alt="Logo Clementina" />
       </Link>
         <Login className="botones"/>
-      <nav className='menu'>
+      {/* <nav className='menu'>
         <ul>
           <li>
             <NavLink to={`/productos`} className="link">Ver Todo</NavLink>
@@ -25,6 +25,32 @@ const NavBar = () => {
             <NavLink to={`/categoria/2`} className="link">Buzos</NavLink>
           </li>
         </ul>
+        <CartWidget />
+      </nav> */}
+      <nav className='menu'>
+        <ul className="ulNav">
+          <li>
+            <NavLink to={"/"} className="link">Inicio</NavLink>
+          </li>
+          <li className="liCategoria">
+            <NavLink className="link" to={"/productos"}>Productos</NavLink>
+            <ul className="ulCategorias" >
+            <li>
+            <NavLink to={`/categoria/1`} className="linkCategoria">Remeras</NavLink>
+          </li>
+          <li>
+            <NavLink to={`/categoria/3`} className="linkCategoria">Pantalones</NavLink>
+          </li>
+          <li>
+            <NavLink to={`/categoria/2`} className="linkCategoria">Buzos</NavLink>
+          </li>
+            </ul>
+          </li>
+          <li>
+            <NavLink to={"*"} className="link">Info</NavLink>
+          </li>
+        </ul>
+
         <CartWidget />
       </nav>
     </header>
