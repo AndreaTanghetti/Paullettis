@@ -1,87 +1,90 @@
 header {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 160px 60px;
-    grid-template-areas:
-        ". logo login"
-        "menu menu menu";
-    background: black;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 160px 60px;
+  grid-template-areas:
+    ". logo login"
+    "menu menu menu";
+  background: black;
 
 }
 
 .logo {
-    grid-area: logo;
-    margin: auto;
+  grid-area: logo;
+  margin: auto;
 }
 
 img {
-    width: 300px;
+  width: 300px;
 
 }
 
-.login{
-    grid-area: login;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.login {
+  grid-area: login;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 
 
 .menu {
-    grid-area: menu;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  grid-area: menu;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
-.nav-icon-5{
-    display: none;
+
+.nav-icon-5 {
+  display: none;
 }
 
 .ulNav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  width: 60%;
 }
 
 li {
   position: relative;
-  list-style: none;}
+  list-style: none;
+}
 
 /* categoria */
-.liCategoria{
-      --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
+.liCategoria {
+  --clip: polygon(0 0, 100% 0, 100% 0, 0 0);
 }
 
-.liCategoria:hover{
-      --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%) ;
+.liCategoria:hover {
+  --clip: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
 
 }
 
-.ulCategorias{
-      position: absolute;
+.ulCategorias {
+  position: absolute;
   transition: -webkit-clip-path 0.3s;
   transition: clip-path 0.3s;
   transition: clip-path 0.3s, -webkit-clip-path 0.3s;
   -webkit-clip-path: var(--clip);
-          clip-path: var(--clip);
+  clip-path: var(--clip);
   right: -25px;
-  bottom: -10px; 
+  bottom: -10px;
   width: -moz-max-content;
   width: max-content;
   transform: translateY(100%);
   background-color: black;
   padding: 10px 20px;
-    border-radius:0 0 16px 16px;
-    text-align: center;
+  border-radius: 0 0 16px 16px;
+  text-align: center;
+  z-index: 1;
 
 }
 
 
 
-.linkCategoria{
-      color: white;
+.linkCategoria {
+  color: white;
   text-decoration: none;
   font-size: 16px;
   font-weight: 500px;
@@ -89,45 +92,46 @@ li {
   padding: 10px;
   letter-spacing: 3px;
 }
-.linkCategoria:hover{
-    background-color: violet;
-    border-radius: 50px;
+
+.linkCategoria:hover {
+  background-color: violet;
+  border-radius: 50px;
 }
 
 /* finCategoria */
 .link {
-    color: white;
-    text-decoration: none;
-    transition: 0.5s;
+  color: white;
+  text-decoration: none;
+  transition: 0.5s;
 }
 
 .link:hover {
-    background-color: white;
-    color: black;
-    padding: 8px;
-    border: solid 1px white;
-    border-radius: 50px;
+  background-color: white;
+  color: black;
+  padding: 8px;
+  border: solid 1px white;
+  border-radius: 50px;
 }
 
 
-@media (max-width: 500px){
-    header {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 100px 60px 60px;
-        grid-template-areas:
-            "logo logo"
-            "login login"
-            "menu menu";
-    }
-    .menu{
-        display: flex;
-        justify-content: space-between;
-        padding-left: 10px;
-        padding-right: 10px;
-    }
+@media (max-width: 500px) {
+  header {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 120px  70px;
+    grid-template-areas:
+      "logo logo"
+      "menu menu";
+  }
 
-.nav-icon-5{
+  .menu {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .nav-icon-5 {
     width: 30px;
     height: 30px;
     position: relative;
@@ -135,7 +139,8 @@ li {
     display: inline-block;
     margin-top: 10px;
   }
-  .nav-icon-5 span{
+
+  .nav-icon-5 span {
     width: 25px;
     height: 3px;
     background-color: #fff;
@@ -144,55 +149,88 @@ li {
     transition: .3s cubic-bezier(.8, .5, .2, 1.4);
     transition-duration: 500ms
   }
-  .nav-icon-5 span:nth-child(1){
-    top:0px;
-    left: 0px;
-  }
-  .nav-icon-5 span:nth-child(2){
-    top:10px;
-    left: 0px;
-    opacity:1;
-  }
-  .nav-icon-5 span:nth-child(3){
-    bottom:2px;
+
+  .nav-icon-5 span:nth-child(1) {
+    top: 0px;
     left: 0px;
   }
 
-  .nav-icon-5.open span:nth-child(1){
+  .nav-icon-5 span:nth-child(2) {
+    top: 10px;
+    left: 0px;
+    opacity: 1;
+  }
+
+  .nav-icon-5 span:nth-child(3) {
+    bottom: 2px;
+    left: 0px;
+  }
+
+  .nav-icon-5.open span:nth-child(1) {
     transform: rotate(45deg);
     top: 13px;
   }
-  .nav-icon-5.open span:nth-child(2){
-    opacity:0;
+
+  .nav-icon-5.open span:nth-child(2) {
+    opacity: 0;
   }
-  .nav-icon-5.open span:nth-child(3){
+
+  .nav-icon-5.open span:nth-child(3) {
     transform: rotate(-45deg);
     top: 13px;
   }
 
 
-    .ulNav {
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        padding: 10px;
-        background-color: black;
-        position: absolute;
-        top: 33%;
-        left: 0;
-        width: 50%;
-        height: 70%;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: clip-path 0.3s;
-      }
-      
-      .ulNav.open {
-        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-        z-index: 2;
-      }
-      li{
-        margin-top: 15px;
-        margin-bottom: 15px;
-      }
-    
+  .ulNav {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 10px;
+    background-color: black;
+    position: absolute;
+    top: 170px;
+    left: 0;
+    width: 50%;
+    height: 70%;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path 0.3s;
+  }
+
+  .ulNav.open {
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    z-index: 2;
+  }
+
+  li {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+
+  .liCategoria {
+    display: flex;
+    flex-direction: column;
+    --clip: 0;
+  }
+
+  .ulCategorias {
+    position: static;
+    width: 100%;
+    border-radius: 0;
+    transform: none;
+    text-align: start;
+    padding: 0;
+  }
+
+  .link:hover {
+    background-color: violet;
+  }
+
+  .link.no-hover:hover {
+    background-color: initial;
+    color: white;
+    padding: 0;
+    border: none;
+    border-radius: none;
+    cursor: none;
+  }
 }

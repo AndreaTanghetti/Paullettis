@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import "./NavBar.css";
 import CartWidget from '../CartWidget/CartWidget';
 import imgLogo from '../../../public/img/logo.png';
@@ -7,18 +7,33 @@ import Login from "../Login/Login";
 
 const NavBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isResponsive, setIsResponsive] = useState(false);
   const toggleMenu = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 500) {
+        setIsResponsive(true);
+      } else {
+        setIsResponsive(false);
+      }
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize(); 
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
   return (
     <header>
       <Link to={'/'} className='logo'>
         <img src={imgLogo} alt="Logo Clementina" />
       </Link>
-      <Login />
-
+      {!isResponsive && <Login />}
       <nav className="menu">
 
 
@@ -32,7 +47,7 @@ const NavBar = () => {
             <NavLink to={"/"} className="link">Inicio</NavLink>
           </li>
           <li className="liCategoria">
-            <NavLink className="link" >Productos</NavLink>
+            <NavLink className="link no-hover" >Productos</NavLink>
             <ul className="ulCategorias" >
               <li>
                 <NavLink to={`/categoria/1`} className="linkCategoria">Remeras</NavLink>
@@ -51,6 +66,7 @@ const NavBar = () => {
           <li>
             <NavLink to={"*"} className="link">Info</NavLink>
           </li>
+          {isResponsive && <Login />}
         </ul>
         <CartWidget />
       </nav>
