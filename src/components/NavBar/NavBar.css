@@ -34,6 +34,9 @@ img {
     justify-content: center;
     align-items: center;
 }
+.nav-icon-5{
+    display: none;
+}
 
 .ulNav {
     display: flex;
@@ -72,7 +75,11 @@ li {
   padding: 10px 20px;
     border-radius:0 0 16px 16px;
     text-align: center;
+
 }
+
+
+
 .linkCategoria{
       color: white;
   text-decoration: none;
@@ -113,4 +120,79 @@ li {
             "login login"
             "menu menu";
     }
+    .menu{
+        display: flex;
+        justify-content: space-between;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+
+.nav-icon-5{
+    width: 30px;
+    height: 30px;
+    position: relative;
+    cursor: pointer;
+    display: inline-block;
+    margin-top: 10px;
+  }
+  .nav-icon-5 span{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin-bottom: 5px;
+    position: absolute;
+    transition: .3s cubic-bezier(.8, .5, .2, 1.4);
+    transition-duration: 500ms
+  }
+  .nav-icon-5 span:nth-child(1){
+    top:0px;
+    left: 0px;
+  }
+  .nav-icon-5 span:nth-child(2){
+    top:10px;
+    left: 0px;
+    opacity:1;
+  }
+  .nav-icon-5 span:nth-child(3){
+    bottom:2px;
+    left: 0px;
+  }
+
+  .nav-icon-5.open span:nth-child(1){
+    transform: rotate(45deg);
+    top: 13px;
+  }
+  .nav-icon-5.open span:nth-child(2){
+    opacity:0;
+  }
+  .nav-icon-5.open span:nth-child(3){
+    transform: rotate(-45deg);
+    top: 13px;
+  }
+
+
+    .ulNav {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 10px;
+        background-color: black;
+        position: absolute;
+        top: 33%;
+        left: 0;
+        width: 50%;
+        height: 70%;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: clip-path 0.3s;
+      }
+      
+      .ulNav.open {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+        z-index: 2;
+      }
+      li{
+        margin-top: 15px;
+        margin-bottom: 15px;
+      }
+    
 }

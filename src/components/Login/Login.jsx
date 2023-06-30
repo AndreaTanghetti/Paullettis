@@ -31,7 +31,7 @@ const Login = () => {
   return (
     <div className="login">
 <Link to={'/crearcuenta'} className="linkCrear">Crear Cuenta</Link>
-<span>|</span>
+<span className="span">|</span>
 <Link to={'/iniciarsesion'} className="linkIniciar">Iniciar Sesion</Link>
     </div>
   )
